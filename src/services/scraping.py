@@ -11,4 +11,8 @@ def get_tools():
     
     # find the container that wraps the tool cards
     tool_cards = next( (c for c in containers if container.name=='div' and container.find('dl') is not None), None)
-        
+
+    # html structure can change, raise error
+    assert tool_cards is not None, StructureChangedError("HTML Structure changed, conditionals updating required to scrap")
+
+    
