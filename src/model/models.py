@@ -7,10 +7,11 @@ class Tool:
 
 
 class Business:
-    def __init__(self, name, description, logo=None):
-        self.name = name
+    def __init__(self, name, description, logo=None, webpage=None):
+        self.name        = name
         self.description = description
-        self.logo = logo
+        self.logo        = logo
+        self.webpage     = webpage
 
 
 class Logo:
